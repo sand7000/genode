@@ -3,7 +3,7 @@
 	<requires> <timer/> </requires>
 
 	<events>
-		<timeout meaning="failed" sec="60" />
+		<timeout meaning="failed" sec="70" />
 		<log meaning="succeeded">
 			Tests finished successfully!*
 			Tests finished successfully!
