@@ -121,7 +121,7 @@ SRC_C_md5      = md5_dgst.c md5_one.c
 SRC_C_mdc2     = mdc2_one.c mdc2dgst.c
 SRC_C_objects  = o_names.c obj_dat.c obj_err.c obj_lib.c obj_xref.c
 SRC_C_modes    = cbc128.c ctr128.c cts128.c cfb128.c ofb128.c \
-                 gcm128.c ccm128.c xts128.c
+                 gcm128.c ccm128.c xts128.c wrap128.c
 SRC_C_ocsp     = ocsp_asn.c ocsp_ext.c ocsp_ht.c ocsp_lib.c \
                  ocsp_cl.c ocsp_srv.c ocsp_prn.c ocsp_vfy.c \
                  ocsp_err.c
