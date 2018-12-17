@@ -1,14 +1,14 @@
 LICENSE   := MIT
 DOWNLOADS := curl.archive
-VERSION   := 7.29.0
+VERSION   := 7.50.3
 
 URL(curl) := http://curl.haxx.se/download/curl-$(VERSION).tar.gz
-SHA(curl) := 67dc5b952ac489191b62dbe95b18d336b821649f61404a280186c72e8cd0b9d6
+SHA(curl) := 3991c2234986178af3b3f693e5afa35d49da2ab4ba61292e3817222446dca7e1
 SIG(curl) := ${URL(curl)}.asc
 KEY(curl) := daniel@haxx.se
 DIR(curl) := src/lib/curl
 
-PATCHES   := src/lib/curl/*.patch
+#PATCHES   := src/lib/curl/*.patch
 
 #
 # Assemble public include directory. Filter out 'curlbuild.h' because we
@@ -22,6 +22,13 @@ PATCHES   := src/lib/curl/*.patch
 curl_include_dir := src/lib/curl/include/curl
 curl_headers      = $(filter-out curlbuild.h,$(notdir $(wildcard $(curl_include_dir)/*.h)))
 
-DIRS := include/curl
+DIRS := include/vtls include/vauth include/curl include 
 DIR_CONTENT(include/curl) = $(addprefix $(curl_include_dir)/,$(curl_headers))
+DIR_CONTENT(include/vauth) = $(shell find src/lib/curl/lib/vauth -name *.h)
+DIR_CONTENT(include/vtls) = $(shell find src/lib/curl/lib/vtls -name *.h)
+DIR_CONTENT(include) = $(shell find src/lib/curl/lib/ -name *.h) \
+                       $(REP_DIR)/src/lib/curl/*.h \
+
+PATCHES   := $(addprefix src/lib/curl/,curl_setup.patch curl_setup_once.patch curl_ntlm_wb.patch gtls.patch sendf.patch telnet.patch)
+PATCH_OPT := -p1 -d src/lib/curl/lib
 

@@ -1,0 +1,13 @@
+--- a/crypto/rand/rand_unix.c
++++ b/crypto/rand/rand_unix.c
+@@ -15,6 +15,10 @@
+ #include <openssl/rand.h>
+ #include "rand_lcl.h"
+ 
++#ifndef __OPENBSD__
++#define __OPENBSD__
++#endif
++
+ #if !(defined(OPENSSL_SYS_WINDOWS) || defined(OPENSSL_SYS_WIN32) || defined(OPENSSL_SYS_VMS) || defined(OPENSSL_SYS_VXWORKS) || defined(OPENSSL_SYS_UEFI))
+ 
+ # include <sys/types.h>

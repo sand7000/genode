@@ -5,7 +5,7 @@ BIO_new_ssl_connect T
 BIO_ssl_copy_session_id T
 BIO_ssl_shutdown T
 DTLSv1_client_method T
-DTLSv1_enc_data D 112
+DTLSv1_enc_data D 128
 DTLSv1_method T
 DTLSv1_server_method T
 ERR_load_SSL_strings T
@@ -257,7 +257,7 @@ SSL_use_certificate_ASN1 T
 SSL_use_certificate_file T
 SSL_use_psk_identity_hint T
 SSL_version T
-SSL_version_str D 8
+SSL_version_str D 28
 SSL_want T
 SSL_write T
 SSLv23_client_method T
@@ -267,7 +267,7 @@ SSLv2_client_method T
 SSLv2_method T
 SSLv2_server_method T
 SSLv3_client_method T
-SSLv3_enc_data D 112
+SSLv3_enc_data D 128
 SSLv3_method T
 SSLv3_server_method T
 TLSv1_1_client_method T
@@ -277,7 +277,7 @@ TLSv1_2_client_method T
 TLSv1_2_method T
 TLSv1_2_server_method T
 TLSv1_client_method T
-TLSv1_enc_data D 112
+TLSv1_enc_data D 128
 TLSv1_method T
 TLSv1_server_method T
 d2i_SSL_SESSION T
@@ -468,7 +468,7 @@ ssl3_setup_key_block T
 ssl3_setup_read_buffer T
 ssl3_setup_write_buffer T
 ssl3_shutdown T
-ssl3_undef_enc_method D 112
+ssl3_undef_enc_method D 128
 ssl3_version_str R 40
 ssl3_write T
 ssl3_write_bytes T

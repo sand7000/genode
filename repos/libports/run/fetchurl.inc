@@ -59,14 +59,14 @@ append_platform_drv_config
 
 append_if [have_spec gpio] config "
 	<start name=\"[gpio_drv]\" caps=\"140\">
-		<resource name=\"RAM\" quantum=\"4M\"/>
+		<resource name=\"RAM\" quantum=\"8M\"/>
 		<provides><service name=\"Gpio\"/></provides>
 		<config/>
 	</start>"
 
 append config {
 	<start name="timer">
-		<resource name="RAM" quantum="1M"/>
+		<resource name="RAM" quantum="5M"/>
 		<provides> <service name="Timer"/> </provides>
 	</start>
 	<start name="nic_drv" caps="120">
@@ -76,13 +76,13 @@ append config {
 		} [nic_drv_config] {
 	</start>
 	<start name="report_rom">
-		<resource name="RAM" quantum="4M"/>
+		<resource name="RAM" quantum="8M"/>
 		<provides> <service name="ROM"/> <service name="Report"/> </provides>
 		<config verbose="yes"/>
 	</start>
 
 	<start name="fetchurl" caps="500">
-		<resource name="RAM" quantum="32M"/>
+		<resource name="RAM" quantum="200M"/>
 		<config>
 			<report progress="yes"/>
 			<vfs>

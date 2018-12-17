@@ -1977,7 +1977,7 @@ OPENSSL_config T
 OPENSSL_cpuid_setup T
 OPENSSL_gmtime T
 OPENSSL_gmtime_adj T
-OPENSSL_ia32cap_P B 8
+OPENSSL_ia32cap_P B 16
 OPENSSL_ia32cap_loc T
 OPENSSL_init T
 OPENSSL_isservice T
@@ -3199,7 +3199,7 @@ _ossl_old_des_set_odd_parity T
 _ossl_old_des_string_to_2keys T
 _ossl_old_des_string_to_key T
 _ossl_old_des_xcbc_encrypt T
-_shadow_DES_check_key B 4
+_shadow_DES_check_key B 34
 _shadow_DES_rw_mode D 4
 a2d_ASN1_OBJECT T
 a2i_ASN1_ENUMERATED T
@@ -3261,7 +3261,7 @@ c2i_ASN1_INTEGER T
 c2i_ASN1_OBJECT T
 check_defer T
 cleanse_ctr B 1
-cmac_asn1_meth D 208
+cmac_asn1_meth D 216
 cmac_pkey_meth D 208
 cms_Data_create T
 cms_DigestAlgorithm_find_ctx T
@@ -3485,9 +3485,9 @@ d2i_X509_VAL T
 d2i_X509_bio T
 d2i_X509_fp T
 default_pctx D 40
-dh_asn1_meth D 208
+dh_asn1_meth D 216
 dh_pkey_meth D 208
-dsa_asn1_meths D 1040
+dsa_asn1_meths D 1080
 dsa_builtin_paramgen T
 dsa_pkey_meth D 208
 dsa_pub_internal_it D 56
@@ -3593,7 +3593,7 @@ ec_wNAF_mul T
 ec_wNAF_precompute_mult T
 ecdh_check T
 ecdsa_check T
-eckey_asn1_meth D 208
+eckey_asn1_meth D 216
 engine_cleanup_add_first T
 engine_cleanup_add_last T
 engine_free_util T
@@ -3618,7 +3618,7 @@ get_rfc3526_prime_4096 T
 get_rfc3526_prime_6144 T
 get_rfc3526_prime_8192 T
 hex_to_string T
-hmac_asn1_meth D 208
+hmac_asn1_meth D 216
 hmac_pkey_meth D 208
 i2a_ACCESS_DESCRIPTION T
 i2a_ASN1_ENUMERATED T
@@ -3903,7 +3903,7 @@ private_Camellia_set_key T
 private_RC4_set_key T
 rand_ssleay_meth D 48
 ripemd160_block_data_order T
-rsa_asn1_meths D 416
+rsa_asn1_meths D 432
 rsa_pkey_meth D 208
 s2i_ASN1_INTEGER T
 s2i_ASN1_OCTET_STRING T

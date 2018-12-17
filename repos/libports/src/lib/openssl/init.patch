@@ -1,0 +1,18 @@
+--- a/crypto/init.c
++++ b/crypto/init.c
+@@ -7,6 +7,7 @@
+  * https://www.openssl.org/source/license.html
+  */
+ 
++#include <openssl/opensslconf.h>
+ #include <internal/cryptlib_int.h>
+ #include <openssl/err.h>
+ #include <internal/rand.h>
+@@ -26,6 +27,7 @@
+ #include <internal/dso.h>
+ 
+ static int stopped = 0;
++#define OPENSSL_NO_STATIC_ENGINE
+ 
+ /*
+  * Since per-thread-specific-data destructors are not universally

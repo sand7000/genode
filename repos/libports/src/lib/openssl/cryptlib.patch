@@ -1,0 +1,16 @@
+--- a/crypto/include/internal/cryptlib.h
++++ b/crypto/include/internal/cryptlib.h
+@@ -39,6 +39,13 @@
+ typedef struct mem_st MEM;
+ DEFINE_LHASH_OF(MEM);
+ 
++#ifndef OPENSSLDIR
++#define OPENSSLDIR "/usr/lib/ssl"
++#endif
++#ifndef ENGINESDIR
++#define ENGINESDIR "/usr/lib/engines"
++#endif
++
+ # ifndef OPENSSL_SYS_VMS
+ #  define X509_CERT_AREA          OPENSSLDIR
+ #  define X509_CERT_DIR           OPENSSLDIR "/certs"

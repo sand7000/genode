@@ -1,0 +1,10 @@
+--- a/vtls/gtls.c	2018-12-17 09:24:29.113938931 -0600
++++ b/vtls/gtls.c	2018-12-17 09:24:36.987272311 -0600
+@@ -29,6 +29,7 @@
+  */
+ 
+ #include "curl_setup.h"
++#include "sreadwrite.h"
+ 
+ #ifdef USE_GNUTLS
+ 

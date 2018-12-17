@@ -1,0 +1,13 @@
+--- a/curl_setup.h	2018-11-30 10:02:02.481654512 -0600
++++ b/curl_setup.h	2018-11-05 10:09:58.033407865 -0600
+@@ -36,6 +36,10 @@
+  * configuration file for platforms which lack config tool.
+  */
+ 
++void __assert(const char *, const char *, int, const char *);
++#define	assert(e)	((e) ? (void)0 : __assert(__func__, __FILE__, \
++			    __LINE__, #e))
++#define HAVE_CONFIG_H
+ #ifdef HAVE_CONFIG_H
+ 
+ #include "curl_config.h"
